@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Coolzinho hoje?</title>
+    <style>
+        /* Estilos para melhor visualização */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://estradas.com.br/wp-content/uploads/2018/03/RODOVIA-sc.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            color: white;
+            overflow: hidden;
+        }
+        #sim {
+            padding: 40px 80px; /* Ajuste o tamanho do padding para o botão SIM */
+            background-color: green;
+            color: white;
+            font-size: 36px; /* Ajuste o tamanho da fonte do botão SIM */
+            cursor: pointer;
+            margin: 10px;
+            border: none;
+            border-radius: 8px;
+        }
+        #nao {
+            padding: 10px 20px; /* Ajuste o tamanho do padding para o botão NÃO */
+            background-color: red;
+            color: white;
+            font-size: 16px; /* Ajuste o tamanho da fonte do botão NÃO */
+            cursor: pointer;
+            margin: 10px;
+            border: none;
+            border-radius: 8px;
+            position: absolute;
+        }
+        h1 {
+            font-size: 48px; /* Ajuste o tamanho da fonte da pergunta */
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Coolzinho hoje?</h1>
+    <div>
+        <button id="sim" onclick="window.location.href='https://pbs.twimg.com/media/FoKWqvAWIAEN5Y5.jpg'">SIM</button>
+        <button id="nao" onclick="moveNao()">NÃO</button>
+    </div>
+
+    <script>
+        function moveNao() {
+            const naoButton = document.getElementById('nao');
+            const randomX = Math.random() * (window.innerWidth - naoButton.clientWidth);
+            const randomY = Math.random() * (window.innerHeight - naoButton.clientHeight);
+            naoButton.style.left = randomX + 'px';
+            naoButton.style.top = randomY + 'px';
+        }
+    </script>
+</body>
+</html>
