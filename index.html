@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Coolzinho hoje?</title>
+    <title>FAÇA SUA ESCOLHA</title>
     <style>
         /* Estilos para melhor visualização */
         body {
@@ -51,7 +51,7 @@
     </style>
 </head>
 <body>
-    <div id="escolha">FAÇA SUA ESCOLHA</div>
+    <h1>FAÇA SUA ESCOLHA</h1>
     <div id="conteudo">
         <h1>Coolzinho hoje?</h1>
         <div>
@@ -61,11 +61,11 @@
     </div>
 
     <script>
-        // Torna o conteúdo visível após o carregamento da página
-        window.onload = function() {
+        // Exibe o conteúdo após um pequeno atraso para evitar a exibição no compartilhamento
+        setTimeout(function() {
             document.getElementById('conteudo').style.display = 'block';
-            document.getElementById('escolha').style.display = 'none';
-        };
+            document.querySelector('h1').style.display = 'none';
+        }, 1000); // Ajuste o atraso conforme necessário (em milissegundos)
 
         function moveNao() {
             const naoButton = document.getElementById('nao');
