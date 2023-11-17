@@ -16,21 +16,24 @@
             color: white;
             overflow: hidden;
         }
+        #conteudo {
+            display: none; /* Oculta o conteúdo por padrão */
+        }
         #sim {
-            padding: 40px 80px; /* Ajuste o tamanho do padding para o botão SIM */
+            padding: 40px 80px;
             background-color: green;
             color: white;
-            font-size: 36px; /* Ajuste o tamanho da fonte do botão SIM */
+            font-size: 36px;
             cursor: pointer;
             margin: 10px;
             border: none;
             border-radius: 8px;
         }
         #nao {
-            padding: 10px 20px; /* Ajuste o tamanho do padding para o botão NÃO */
+            padding: 10px 20px;
             background-color: red;
             color: white;
-            font-size: 16px; /* Ajuste o tamanho da fonte do botão NÃO */
+            font-size: 16px;
             cursor: pointer;
             margin: 10px;
             border: none;
@@ -38,19 +41,26 @@
             position: absolute;
         }
         h1 {
-            font-size: 48px; /* Ajuste o tamanho da fonte da pergunta */
+            font-size: 48px;
             padding-top: 20px;
         }
     </style>
 </head>
 <body>
-    <h1>Coolzinho hoje?</h1>
-    <div>
-        <button id="sim" onclick="window.location.href='https://pbs.twimg.com/media/FoKWqvAWIAEN5Y5.jpg'">SIM</button>
-        <button id="nao" onclick="moveNao()">NÃO</button>
+    <div id="conteudo">
+        <h1>Coolzinho hoje?</h1>
+        <div>
+            <button id="sim" onclick="window.location.href='https://seulink.com/sim'">SIM</button>
+            <button id="nao" onclick="moveNao()">NÃO</button>
+        </div>
     </div>
 
     <script>
+        // Torna o conteúdo visível após o carregamento da página
+        window.onload = function() {
+            document.getElementById('conteudo').style.display = 'block';
+        };
+
         function moveNao() {
             const naoButton = document.getElementById('nao');
             const randomX = Math.random() * (window.innerWidth - naoButton.clientWidth);
