@@ -44,13 +44,18 @@
             font-size: 48px;
             padding-top: 20px;
         }
+        #escolha {
+            font-size: 24px;
+            margin-top: 100px;
+        }
     </style>
 </head>
 <body>
+    <div id="escolha">FAÇA SUA ESCOLHA</div>
     <div id="conteudo">
         <h1>Coolzinho hoje?</h1>
         <div>
-            <button id="sim" onclick="window.location.href='https://seulink.com/sim'">SIM</button>
+            <button id="sim" onclick="window.location.href='https://pbs.twimg.com/media/FoKWqvAWIAEN5Y5.jpg'">SIM</button>
             <button id="nao" onclick="moveNao()">NÃO</button>
         </div>
     </div>
@@ -59,6 +64,7 @@
         // Torna o conteúdo visível após o carregamento da página
         window.onload = function() {
             document.getElementById('conteudo').style.display = 'block';
+            document.getElementById('escolha').style.display = 'none';
         };
 
         function moveNao() {
